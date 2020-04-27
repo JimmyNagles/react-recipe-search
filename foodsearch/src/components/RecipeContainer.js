@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import {Col, Container,Row,Icon} from "react-materialize";
-import Card from "./Card";
+import {Col, Container,Row,Icon,Card} from "react-materialize";
+
+import Fone from './video/Fone.mp4'
 import SearchForm from "./SearchForm";
 import RecipeCard from "./RecipeCard";
 import API from "../utils/API";
@@ -38,12 +39,43 @@ const RecipeContainer = () => {
 
     return (
      <div>
+        <video autoPlay loop muted
+        
+        style={{
+            position:"absolute",
+            width:"100%",
+            left:"50%",  
+            top:"50%",
+            height:"100%",
+            objectFit:"cover",
+            transform:"translate(-50%,-50%)",
+            zIndex:"-1"
+        }}
+        
+        >
+        
+          <source src={Fone} type="video/mp4"></source>
+
+
+          
+        </video>
+
+
 
        <Container>
          <Row> 
 
          <Col l={12} >
-            <Card  heading={<Icon className="center large brown-text text-darken-4">search</Icon>}>
+            <Card  className="transparent "
+            
+            title={
+              <div className=" center">
+                    {result.recipe || "Search For a Recepie To Start"}
+                <Icon className="center medium left ">search   </Icon> 
+
+              </div>
+              }>
+
               <SearchForm
                 value={search}
                 handleInputChange={handleInputChange}
@@ -54,10 +86,7 @@ const RecipeContainer = () => {
           </Row>
 
           <Row>
-          <Col l={12} >
-            <Card
-              heading={result.recipe || "Search for a recepie to begin"}> </Card>
-       </Col>
+       
 
        {console.log('result', result)}
 

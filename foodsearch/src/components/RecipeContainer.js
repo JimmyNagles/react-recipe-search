@@ -38,7 +38,7 @@ const RecipeContainer = () => {
 
 
     return (
-     <div>
+     <div >
         <video autoPlay loop muted
         
         style={{

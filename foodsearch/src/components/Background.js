@@ -1,4 +1,5 @@
 import React from "react";
+import Fone from './video/Fone.mp4'
 
 
 
@@ -20,15 +21,28 @@ function Background(props) {
             objectFit:"cover",
             transform:"translate(-50%,-50%)",
             zIndex:"-1"
-        }}
-        
-        >
+        }}>
+
+
+
         
           <source src={Fone} type="video/mp4"></source>
 
 
           
         </video>
+
+
+        <div 
+         style={{
+            position:"absolute",
+            left:"50%",  
+            top:"50%",
+            transform:"translate(-50%,-50%)",
+          
+      }}
+        
+        >{props.children}</div>
 
       </div>
    

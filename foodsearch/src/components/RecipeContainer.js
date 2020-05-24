@@ -6,7 +6,7 @@ import SearchForm from "./SearchForm";
 import RecipeCard from "./RecipeCard";
 import API from "../utils/API";
 import Background from "./Background";
-
+import CardHome from "./CardHome";
 const RecipeContainer = () => {
   const [result, setResult] = useState({});
   const [search, setSearch] = useState("");
@@ -34,7 +34,10 @@ const RecipeContainer = () => {
   return (
     <div>
       <Background>
-        <Card
+    
+      </Background>
+      <CardHome>
+      <Card
           className="transparent "
           title={
             <div className=" center">
@@ -49,8 +52,8 @@ const RecipeContainer = () => {
             handleFormSubmit={handleFormSubmit}
           />
         </Card>
-      </Background>
 
+      </CardHome>
       <Container>
         <Row>
           {result.recipes &&

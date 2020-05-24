@@ -17,7 +17,7 @@ function Background(props) {
             width:"100%",
             left:"50%",  
             top:"50%",
-            height:"100%",
+            height:"100vh",
             objectFit:"cover",
             transform:"translate(-50%,-50%)",
             zIndex:"-1"
@@ -38,6 +38,7 @@ function Background(props) {
             position:"absolute",
             left:"50%",  
             top:"50%",
+           
             transform:"translate(-50%,-50%)",
           
       }}

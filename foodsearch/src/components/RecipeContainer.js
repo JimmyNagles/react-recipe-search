@@ -41,7 +41,7 @@ const RecipeContainer = () => {
           className="transparent "
           title={
             <div className=" center">
-              {result.recipe || "Search For recipes To Start"}
+              {result.recipe || "Search For Recipes To Start"}
               <Icon className="center medium left ">search </Icon>
             </div>
           }

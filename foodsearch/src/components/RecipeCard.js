@@ -16,7 +16,7 @@ function RecipeCard(props) {
         </div>
   
           <div className="card-content">
-        <p>{props.title}</p>
+        <p className="orange-text">{props.title}</p>
 
 
           </div>
